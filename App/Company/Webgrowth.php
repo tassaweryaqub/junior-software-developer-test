@@ -8,11 +8,26 @@ namespace App\Company;
  * @package App\Company
  */
 class Webgrowth implements CompanyInterface
-{
+{       
+
     /** @var string $name */
     protected $name = 'WebGrowth BV';
 
-    /**
+
+     /**
+     * Set a new company name
+     *
+     * @param string $name
+     *
+     * @return string|void
+     */
+    public function setName(string $name ) : string 
+    {
+        $this->name = $name;
+    }
+
+
+           /**
      * Get the company name
      *
      * @return string
@@ -21,20 +36,8 @@ class Webgrowth implements CompanyInterface
     {
         return $this->name;
     }
-
-    /**
-     * Set a new company name
-     *
-     * @param string $name
-     *
-     * @return string|void
-     */
-    public function setName($name)
-    {
-        $this->name = $name;
-    }
-
-    /**
+        
+     /**
      * Show the company its information
      *
      * @return string
@@ -43,4 +46,4 @@ class Webgrowth implements CompanyInterface
     {
         return sprintf('Hallo, wij zijn van %s', $this->getName());
     }
-}
+} 

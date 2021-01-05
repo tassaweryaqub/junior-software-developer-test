@@ -13,3 +13,4 @@ interface CompanyInterface
 
     public function setName(string $name): string;
 }
+
